@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Reservas - Baristas</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
+        <style>
+            /* Estilos específicos para la sección de Reservas */
+            .reserve-section {
+                padding: 5rem 0;
+                background-color: var(--background-color, #f8f8f8); /* Fallback si styles.css no carga */
+            }
+            .reserve-container {
+                max-width: 800px;
+                margin: 0 auto;
+                background: #fff;
+                padding: 4rem;
+                border-radius: 1rem;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            }
+            .reserve-container h2 {
+                font-size: 3rem;
+                color: var(--dark-color, #333);
+                text-align: center;
+                margin-bottom: 2rem;
+            }
+            .reserve-form label {
+                display: block;
+                font-size: 1.4rem;
+                color: #555;
+                margin-bottom: 0.5rem;
+                font-weight: 600;
+            }
+            .reserve-form input[type="text"],
+            .reserve-form input[type="email"],
+            .reserve-form input[type="tel"],
+            .reserve-form input[type="date"],
+            .reserve-form input[type="time"],
+            .reserve-form input[type="number"] {
+                width: 100%;
+                padding: 1.5rem;
+                margin-bottom: 2rem;
+                border: 1px solid #ddd;
+                border-radius: 0.5rem;
+                font-family: inherit;
+                font-size: 1.4rem;
+                outline: none;
+                box-sizing: border-box; 
+            }
+            .form-submit-btn {
+                border: none;
+                background-color: var(--primary-color, #a8723c);
+                color: #fff;
+                padding: 1.5rem 3rem;
+                text-transform: uppercase;
+                border-radius: 3rem;
+                font-size: 1.6rem;
+                cursor: pointer;
+                font-weight: 600;
+                transition: background-color 0.3s ease;
+                display: block;
+                width: 100%;
+            }
+            .form-submit-btn:hover {
+                background-color: var(--dark-color, #333);
+            }
+            .form-group {
+                display: flex;
+                gap: 20px;
+            }
+            .form-group > div {
+                flex: 1;
+            }
+
+            @media (max-width: 600px) {
+                .form-group {
+                    flex-direction: column;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="container-hero">
+                <div class="container hero">
+                    <div class="customer-support">
+                        <i class="fa-solid fa-headset"></i>
+                        <div class="content-customer-support">
+                            <span class="text">Soporte al cliente</span>
+                            <span class="number">123-456-7890</span>
+                        </div>
+                    </div>
+                    <div class="container-logo">
+                        <i class="fa-solid fa-mug-hot"></i>
+                        <h1 class="logo"><a href="index.html">Baristas</a></h1>
+                    </div>
+                    <div class="container-user">
+                        <i class="fa-solid fa-user"></i>
+                        <i class="fa-solid fa-basket-shopping"></i>
+                        <div class="content-shopping-cart">
+                            <span class="text">Carrito</span>
+                            <span class="number">(0)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-navbar">
+                <nav class="navbar container">
+                    <i class="fa-solid fa-bars"></i>
+                    <ul class="menu">
+                        <li><a href="/index.html">Inicio</a></li>
+                        <li><a href="/Moca Elado.html">Moca Helado</a></li>
+                        <li><a href="/Expreso.html">Reservas</a></li>
+                        <li><a href="/Comentarios.html">Comentarios</a></li>
+                        <li><a href="/ubicacion.html">ubicacion</a></li>
+                         
+                        <li><a href="/blog.html">Blog</a></li>
+                    </ul>
+
+                    <form class="search-form">
+                        <input type="search" placeholder="Buscar..." />
+                        <button class="btn-search">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </form>
+                </nav>
+            </div>
+        </header>
+
+        <section class="banner" style="background-image: linear-gradient(100deg, #000000, #00000020), url('img/cafe-interior.jpg'); height: 35rem;">
+            <div class="content-banner" style="padding: 12rem 0;">
+                <p>Asegura tu Mesa</p>
+                <h2>¡Reserva tu Espacio <br />en Baristas!</h2>
+            </div>
+        </section>
+
+        <main class="main-content">
+            <section class="container reserve-section">
+                <div class="reserve-container">
+                    <h2 style="color: var(--primary-color);">Formulario de Reserva</h2>
+                    <p style="text-align: center; margin-bottom: 3rem; font-size: 1.6rem; color: #777;">
+                        Completa los detalles para asegurar tu mesa en la fecha y hora deseadas.
+                    </p>
+
+                    <form id="reservation-form" class="reserve-form">
+                        <div class="form-group">
+                            <div>
+                                <label for="reserve-name">Tu Nombre *</label>
+                                <input type="text" id="reserve-name" placeholder="Nombre completo" required>
+                            </div>
+                            <div>
+                                <label for="reserve-email">Tu Correo Electrónico *</label>
+                                <input type="email" id="reserve-email" placeholder="ejemplo@correo.com" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div>
+                                <label for="reserve-phone">Teléfono de Contacto</label>
+                                <input type="tel" id="reserve-phone" placeholder="123-456-7890">
+                            </div>
+                            <div>
+                                <label for="reserve-people">Número de Personas *</label>
+                                <input type="number" id="reserve-people" min="1" max="20" value="2" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div>
+                                <label for="reserve-date">Fecha *</label>
+                                <input type="date" id="reserve-date" required>
+                            </div>
+                            <div>
+                                <label for="reserve-time">Hora * (8:00 AM - 8:00 PM)</label>
+                                <input type="time" id="reserve-time" min="08:00" max="20:00" value="14:00" required>
+                            </div>
+                        </div>
+                        
+                        <label for="reserve-notes">Notas / Solicitudes Especiales (Opcional)</label>
+                        <input type="text" id="reserve-notes" placeholder="Ej: Mesa cerca de la ventana, necesitamos una silla para bebé, etc.">
+
+                        <button type="submit" class="form-submit-btn">Confirmar Reserva</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="container container-footer">
+                <div class="menu-footer">
+                    <div class="contact-info">
+                        <p class="title-footer">Información de Contacto</p>
+                        <ul>
+                            <li>Dirección: 71 Pennington Lane Vernon Rockville, CT 06066</li>
+                            <li>Teléfono: 123-456-7890</li>
+                            <li>Fax: 55555300</li>
+                            <li>EmaiL: baristas@support.com</li>
+                        </ul>
+                        <div class="social-icons">
+                            <span class="facebook"><i class="fa-brands fa-facebook-f"></i></span>
+                            <span class="twitter"><i class="fa-brands fa-twitter"></i></span>
+                            <span class="youtube"><i class="fa-brands fa-youtube"></i></span>
+                            <span class="pinterest"><i class="fa-brands fa-pinterest-p"></i></span>
+                            <span class="instagram"><i class="fa-brands fa-instagram"></i></span>
+                        </div>
+                    </div>
+                    <div class="information">
+                        <p class="title-footer">Información</p>
+                        <ul>
+                            <li><a href="#">Acerca de Nosotros</a></li>
+                            <li><a href="#">Información Delivery</a></li>
+                            <li><a href="#">Politicas de Privacidad</a></li>
+                            <li><a href="#">Términos y condiciones</a></li>
+                            <li><a href="/contactanos.html">Contactános</a></li>
+                        </ul>
+                    </div>
+                    <div class="my-account">
+                        <p class="title-footer">Mi cuenta</p>
+                        <ul>
+                            <li><a href="#">Mi cuenta</a></li>
+                            <li><a href="#">Historial de ordenes</a></li>
+                            <li><a href="#">Lista de deseos</a></li>
+                            <li><a href="#">Boletín</a></li>
+                            <li><a href="#">Reembolsos</a></li>
+                        </ul>
+                    </div>
+                    <div class="newsletter">
+                        <p class="title-footer">Boletín informativo</p>
+                        <div class="content">
+                            <p>Suscríbete a nuestros boletines ahora y mantente al día con nuevas colecciones.</p>
+                            <input type="email" placeholder="Ingresa el correo aquí...">
+                            <button>Suscríbete</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <p>Desarrollado por Programación para el mundo &copy; 2025</p>
+                    <img src="img/payment.png" alt="Pagos">
+                </div>
+            </div>
+        </footer>
+        <script src="script.js"></script>
+        
+        <script>
+            document.getElementById('reservation-form')?.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const name = document.getElementById('reserve-name').value;
+                const date = document.getElementById('reserve-date').value;
+                const time = document.getElementById('reserve-time').value;
+                const people = document.getElementById('reserve-people').value;
+
+                alert(`¡Reserva solicitada para ${name}! 
+Detalles: 
+- ${people} persona(s)
+- Fecha: ${date} 
+- Hora: ${time}
+
+¡Revisaremos tu solicitud y te contactaremos pronto!`);
+                this.reset();
+            });
+        </script>
+    </body>
+</html>

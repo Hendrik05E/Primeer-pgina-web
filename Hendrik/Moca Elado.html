@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <title>Receta: Moca Helado - Baristas</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
+        <style>
+            
+            .banner {
+                background-color: var(--dark-color);
+                color: #fff;
+                padding: 10rem 0;
+                text-align: center;
+            }
+            .banner p { font-size: 2rem; margin-bottom: 1rem; }
+            .banner h2 { font-size: 4rem; font-weight: 700; }
+
+            
+            .biography-section {
+                padding: 6rem 0;
+                background-color: var(--background-color, #f8f8f8); /* Fondo claro para destacar */
+                text-align: center;
+            }
+            .biography-section h3 {
+                color: var(--primary-color, #a8723c);
+                font-size: 2.8rem;
+                margin-bottom: 2rem;
+                font-weight: 600;
+                position: relative;
+                display: inline-block;
+            }
+            .biography-content {
+                max-width: 90rem;
+                margin: 0 auto;
+                padding: 0 2rem;
+            }
+            .biography-content p {
+                font-size: 1.8rem;
+                line-height: 1.8;
+                margin-bottom: 2.5rem;
+                color: #555;
+            }
+            .biography-content p:last-child {
+                margin-bottom: 0;
+            }
+            .biography-quote {
+                font-style: italic;
+                color: var(--dark-color, #333);
+                font-size: 2rem;
+                margin-top: 3rem;
+                padding: 2rem;
+                border-left: 5px solid var(--primary-color, #a8723c);
+                background-color: #fff;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            }
+            
+            
+            .recipes-section { padding: 6rem 0; }
+            .recipe-card {
+                background-color: #fff; border: 1px solid #ddd;
+                border-radius: 1rem; margin-bottom: 4rem; padding: 3rem;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+                max-width: 80rem; margin-left: auto; margin-right: auto;
+            }
+            .recipe-card h3 {
+                color: var(--primary-color); font-size: 3rem; margin-bottom: 2rem;
+                border-bottom: 2px solid var(--background-color); padding-bottom: 1rem;
+            }
+            .recipe-card h4 {
+                font-size: 2rem; margin-top: 2rem; margin-bottom: 1rem; color: var(--dark-color);
+            }
+            .recipe-card ul, .recipe-card ol {
+                font-size: 1.6rem; line-height: 1.8; margin-left: 2rem; color: #555;
+            }
+            
+            .rating-box {
+                display: flex; align-items: center; gap: 1.5rem; margin-top: 2rem;
+                padding-top: 1.5rem; border-top: 1px solid #eee; cursor: pointer;
+            }
+            .rating-stars i { color: gold; font-size: 2.2rem; }
+            .rating-text { font-size: 1.6rem; font-weight: 500; color: #333; }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="container-hero">
+                <div class="container hero">
+                    <div class="customer-support">
+                        <i class="fa-solid fa-headset"></i>
+                        <div class="content-customer-support">
+                            <span class="text">Soporte al cliente</span>
+                            <span class="number">123-456-7890</span>
+                        </div>
+                    </div>
+                    <div class="container-logo">
+                        <i class="fa-solid fa-mug-hot"></i>
+                        <h1 class="logo"><a href="index.html">Baristas</a></h1>
+                    </div>
+                    <div class="container-user">
+                        <i class="fa-solid fa-user"></i>
+                        <i class="fa-solid fa-basket-shopping"></i>
+                        <div class="content-shopping-cart">
+                            <span class="text">Carrito</span>
+                            <span class="number">(0)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-navbar">
+                <nav class="navbar container">
+                    <i class="fa-solid fa-bars"></i>
+                    <ul class="menu">
+                        <li><a href="/index.html">Inicio</a></li>
+                        <li><a href="/Moca Elado.html">Moca Helado</a></li>
+                        <li><a href="/Expreso.html">Reservas</a></li>
+                        <li><a href="/Comentarios.html">Comentarios</a></li>
+                        <li><a href="/ubicacion.html">ubicacion</a></li>
+                        <li><a href="/blog.html">Blog</a></li>
+                    </ul>
+
+                    <form class="search-form">
+                        <input type="search" placeholder="Buscar..." />
+                        <button class="btn-search">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </form>
+                </nav>
+            </div>
+        </header>
+
+        <section class="banner">
+            <p>Nuestra Receta Favorita</p>
+            <h2>Moca Helado Frío Perfecto</h2>
+        </section>
+
+        <main class="main-content">
+            
+            <section class="container biography-section">
+                <div class="biography-content">
+                    <h3>☕ La Historia de Baristas ☕</h3>
+                    <p>
+                        **Baristas** nació de la pasión por la cultura del café en 2015. Lo que comenzó como un pequeño sueño en un rincón de la ciudad se ha convertido en un refugio para los amantes del buen café. Nuestra misión siempre ha sido simple: ofrecer granos de la más alta calidad, tostados a la perfección y servidos con una sonrisa genuina.
+                    </p>
+                    <p>
+                        Creemos que el café no es solo una bebida, es una experiencia, un ritual que merece ser disfrutado. Trabajamos directamente con fincas seleccionadas en Centro y Sudamérica para asegurar un comercio justo y un sabor inigualable en cada taza. Desde el Expreso matutino hasta nuestro famoso Moca Helado, cada bebida cuenta una historia.
+                    </p>
+                    <div class="biography-quote">
+                        "En Baristas, cada taza es una promesa de calidad y calidez."
+                    </div>
+                </div>
+            </section>
+            
+            <hr>
+
+            <section class="container recipes-section">
+                <div class="recipe-card">
+                    <h3>Receta Completa</h3>
+                    
+                    <div class="rating-box" id="moca-rating">
+                        <div class="rating-stars" data-rating-value="4.5">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <span class="rating-text">Calificación: 4.5/5 (210 votos). ¡Haz click para calificar!</span>
+                    </div>
+
+                    <h4>Ingredientes</h4>
+                    <ul>
+                        <li>1 taza (240ml) de café expreso fuerte o café concentrado frío.</li>
+                        <li>1/2 taza (120ml) de leche de tu elección (entera, avena o almendra).</li>
+                        <li>2 cucharadas de jarabe de chocolate de alta calidad.</li>
+                        <li>1 cucharadita de azúcar (opcional).</li>
+                        <li>Hielo al gusto.</li>
+                        <li>Crema batida para decorar (opcional).</li>
+                    </ul>
+
+                    <h4>Instrucciones</h4>
+                    <ol>
+                        <li>En un vaso, combina el jarabe de chocolate y el azúcar.</li>
+                        <li>Vierte el café expreso caliente sobre el jarabe y revuelve hasta que se disuelva.</li>
+                        <li>Llena un vaso alto con hielo.</li>
+                        <li>Agrega la leche.</li>
+                        <li>Vierte la mezcla de café y chocolate sobre la leche y el hielo.</li>
+                        <li>Decora con crema batida y un poco de jarabe de chocolate extra. ¡Disfruta!</li>
+                    </ol>
+                </div>
+            </section>
+            
+        </main>
+
+        <footer class="footer">
+            <div class="container container-footer">
+                <div class="menu-footer">
+                    <div class="contact-info">
+                        <p class="title-footer">Información de Contacto</p>
+                        <ul>
+                            <li>Dirección: 71 Pennington Lane Vernon Rockville, CT 06066</li>
+                            <li>Teléfono: 123-456-7890</li>
+                            <li>Fax: 55555300</li>
+                            <li>EmaiL: baristas@support.com</li>
+                        </ul>
+                        <div class="social-icons">
+                            <span class="facebook"><i class="fa-brands fa-facebook-f"></i></span>
+                            <span class="twitter"><i class="fa-brands fa-twitter"></i></span>
+                            <span class="youtube"><i class="fa-brands fa-youtube"></i></span>
+                            <span class="pinterest"><i class="fa-brands fa-pinterest-p"></i></span>
+                            <span class="instagram"><i class="fa-brands fa-instagram"></i></span>
+                        </div>
+                    </div>
+                    <div class="information">
+                        <p class="title-footer">Información</p>
+                        <ul>
+                            <li><a href="#">Acerca de Nosotros</a></li>
+                            <li><a href="#">Información Delivery</a></li>
+                            <li><a href="#">Politicas de Privacidad</a></li>
+                            <li><a href="#">Términos y condiciones</a></li>
+                            <li><a href="#">Contactános</a></li>
+                        </ul>
+                    </div>
+                    <div class="my-account">
+                        <p class="title-footer">Mi cuenta</p>
+                        <ul>
+                            <li><a href="#">Mi cuenta</a></li>
+                            <li><a href="#">Historial de ordenes</a></li>
+                            <li><a href="#">Lista de deseos</a></li>
+                            <li><a href="#">Boletín</a></li>
+                            <li><a href="#">Reembolsos</a></li>
+                        </ul>
+                    </div>
+                    <div class="newsletter">
+                        <p class="title-footer">Boletín informativo</p>
+                        <div class="content">
+                            <p>Suscríbete a nuestros boletines ahora y mantente al día con nuevas colecciones.</p>
+                            <input type="email" placeholder="Ingresa el correo aquí...">
+                            <button>Suscríbete</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <p>Desarrollado por Programación para el mundo &copy; 2025</p>
+                    <img src="img/payment.png" alt="Pagos">
+                </div>
+            </div>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>

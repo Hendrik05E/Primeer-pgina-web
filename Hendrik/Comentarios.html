@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Opiniones - Baristas</title>
+		<link rel="stylesheet" href="styles.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		
+        <style>
+            .article-content { padding: 4rem 0; }
+            .article-header { text-align: center; margin-bottom: 3rem; }
+            .article-header h1 { font-size: 3.5rem; font-weight: 600; color: var(--dark-color); margin-bottom: 1rem; }
+            .article-meta { font-size: 1.4rem; color: #777; }
+            .article-body p { font-size: 1.6rem; line-height: 1.8; margin-bottom: 2rem; color: #555; }
+            .article-body img { width: 100%; height: auto; margin: 3rem 0; border-radius: 1rem; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+            
+            /* Sección de Comentarios */
+            .comment-section { border-top: 1px solid #e0e0e0; padding-top: 3rem; margin-top: 5rem; }
+            .comment-section h2 { font-size: 2.5rem; color: var(--dark-color); margin-bottom: 3rem; }
+
+            /* Lista de Comentarios */
+            .comment-item {
+                display: flex; gap: 2rem; margin-bottom: 3rem; padding: 2rem;
+                background-color: #fff; border-radius: 0.5rem;
+                box-shadow: 0 0 5px rgba(0, 0, 0, 0.03);
+            }
+            .comment-item i { font-size: 2.5rem; color: var(--primary-color); margin-top: 0.5rem; }
+            .comment-content h4 { font-size: 1.6rem; font-weight: 600; color: var(--dark-color); }
+            .comment-content span { font-size: 1.2rem; color: #aaa; display: block; margin-bottom: 1rem; }
+            .comment-content p { font-size: 1.4rem; color: #555; }
+
+            /* Formulario de Comentarios */
+            .comment-form { margin-top: 4rem; padding: 3rem; background-color: var(--background-color); border-radius: 1rem; }
+            .comment-form h3 { font-size: 2rem; margin-bottom: 2rem; color: var(--dark-color); }
+            .comment-form input,
+            .comment-form textarea {
+                width: 100%; padding: 1.5rem; margin-bottom: 1.5rem; border: 1px solid #ddd;
+                border-radius: 0.5rem; font-family: inherit; font-size: 1.4rem; outline: none;
+            }
+            .comment-form textarea { resize: vertical; min-height: 15rem; }
+            .comment-form button {
+                border: none; background-color: var(--primary-color); color: #fff;
+                padding: 1.2rem 3rem; text-transform: uppercase; border-radius: 3rem;
+                font-size: 1.4rem; cursor: pointer; font-weight: 600; transition: background-color 0.3s ease;
+            }
+            .comment-form button:hover { background-color: var(--dark-color); }
+        </style>
+	</head>
+	<body>
+		<header>
+            <div class="container-hero">
+                <div class="container hero">
+                    <div class="customer-support">
+                        <i class="fa-solid fa-headset"></i>
+                        <div class="content-customer-support">
+                            <span class="text">Soporte al cliente</span>
+                            <span class="number">123-456-7890</span>
+                        </div>
+                    </div>
+                    <div class="container-logo">
+                        <i class="fa-solid fa-mug-hot"></i>
+                        <h1 class="logo"><a href="index.html">Baristas</a></h1>
+                    </div>
+                    <div class="container-user">
+                        <i class="fa-solid fa-user"></i>
+                        <i class="fa-solid fa-basket-shopping"></i>
+                        <div class="content-shopping-cart">
+                            <span class="text">Carrito</span>
+                            <span class="number">(0)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-navbar">
+				<nav class="navbar container">
+					<i class="fa-solid fa-bars"></i>
+					<ul class="menu">
+						<li><a href="/index.html">Inicio</a></li>
+						<li><a href="/Moca Elado.html">Moca Helado</a></li>
+						<li><a href="/Expreso.html">Reservas</a></li>
+						<li><a href="/Comentarios.html">Comentarios</a></li>
+						<li><a href="/ubicacion.html">ubicacion</a></li>
+						<li><a href="/blog.html">Blog</a></li>
+					</ul>
+
+					<form class="search-form">
+						<input type="search" placeholder="Buscar..." />
+						<button class="btn-search">
+							<i class="fa-solid fa-magnifying-glass"></i>
+						</button>
+					</form>
+				</nav>
+			</div>
+        </header>
+
+        <section class="banner" style="background-image: linear-gradient(100deg, #000000, #00000020), url('img/blog-1.jpg'); height: 35rem;">
+			<div class="content-banner" style="padding: 12rem 0;">
+				<p>Tu Opinión Cuenta</p>
+				<h2>Experiencias en <br />Baristas</h2>
+			</div>
+		</section>
+
+		<main class="main-content">
+			<section class="container article-content">
+                
+                <div class="article-header">
+                    <h1>¡Cuéntanos Cómo Fue Tu Visita a la Cafetería!</h1>
+                    <p class="article-meta">Publicado por **El Equipo Baristas** el 25 de Noviembre, 2025 | Categoría: Retroalimentación</p>
+                </div>
+
+                <div class="article-body">
+                    <p>Queremos escuchar de ti. ¿Disfrutaste tu café? ¿El ambiente fue perfecto para tu reunión? En Baristas, trabajamos día a día para ofrecerte no solo la mejor bebida, sino también un espacio acogedor y un servicio excepcional. Tu experiencia es nuestra prioridad.</p>
+                    
+                    <img src="img/blog-1.jpg" alt="Interior de la Cafetería Baristas" />
+                    
+                    <p>Ya sea un halago por ese barista que te hizo el día o una sugerencia constructiva sobre cómo podemos mejorar, usa la sección de comentarios para compartir tus impresiones. ¡Ayúdanos a seguir siendo tu rincón de café favorito!</p>
+                </div>
+
+                <div class="comment-section">
+                    <h2 id="comment-count">Experiencias de Clientes (3)</h2>
+
+                    <div class="comment-list" id="comment-list">
+                        
+                        <div class="comment-item">
+                            <i class="fa-solid fa-user"></i>
+                            <div class="comment-content">
+                                <h4>Sofía R.</h4>
+                                <span>hace 1 hora</span>
+                                <p>El servicio fue rapidísimo y la chica que me atendió fue súper amable. ¡Mi Capuchino estaba perfecto y el pan de queso, delicioso! 5 estrellas.</p>
+                            </div>
+                        </div>
+
+                        <div class="comment-item">
+                            <i class="fa-solid fa-user"></i>
+                            <div class="comment-content">
+                                <h4>Andrés M.</h4>
+                                <span>hace 1 día</span>
+                                <p>Fui a estudiar y el wifi funcionó de maravilla. El ambiente es tranquilo y las tomas de corriente en cada mesa son un plus. ¡Gran lugar para concentrarse!</p>
+                            </div>
+                        </div>
+
+                        <div class="comment-item">
+                            <i class="fa-solid fa-user"></i>
+                            <div class="comment-content">
+                                <h4>Laura P.</h4>
+                                <span>hace 3 días</span>
+                                <p>Me encanta el lugar y el café. Como sugerencia, ¿podrían añadir más opciones veganas de repostería? ¡Volveré pronto!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="comment-form">
+                        <h3>Deja tu Opinión</h3>
+                        <form id="comment-submission-form">
+                            <input type="text" id="comment-name" placeholder="Tu Nombre *" required>
+                            <input type="email" id="comment-email" placeholder="Tu Correo (no se publicará) *" required>
+                            <textarea id="comment-text" placeholder="¿Cómo fue tu visita a Baristas? Cuéntanos..." required></textarea>
+                            <button type="submit">Enviar Comentario</button>
+                        </form>
+                    </div>
+
+                </div>
+			</section>
+		</main>
+
+		<footer class="footer">
+            <div class="container container-footer">
+                <div class="menu-footer">
+                    <div class="contact-info">
+                        <p class="title-footer">Información de Contacto</p>
+                        <ul>
+                            <li>Dirección: 71 Pennington Lane Vernon Rockville, CT 06066</li>
+                            <li>Teléfono: 123-456-7890</li>
+                            <li>Fax: 55555300</li>
+                            <li>EmaiL: baristas@support.com</li>
+                        </ul>
+                        <div class="social-icons">
+                            <span class="facebook"><i class="fa-brands fa-facebook-f"></i></span>
+                            <span class="twitter"><i class="fa-brands fa-twitter"></i></span>
+                            <span class="youtube"><i class="fa-brands fa-youtube"></i></span>
+                            <span class="pinterest"><i class="fa-brands fa-pinterest-p"></i></span>
+                            <span class="instagram"><i class="fa-brands fa-instagram"></i></span>
+                        </div>
+                    </div>
+                    <div class="information">
+                        <p class="title-footer">Información</p>
+                        <ul>
+                            <li><a href="#">Acerca de Nosotros</a></li>
+                            <li><a href="#">Información Delivery</a></li>
+                            <li><a href="#">Politicas de Privacidad</a></li>
+                            <li><a href="#">Términos y condiciones</a></li>
+                            <li><a href="#">Contactános</a></li>
+                        </ul>
+                    </div>
+                    <div class="my-account">
+                        <p class="title-footer">Mi cuenta</p>
+                        <ul>
+                            <li><a href="#">Mi cuenta</a></li>
+                            <li><a href="#">Historial de ordenes</a></li>
+                            <li><a href="#">Lista de deseos</a></li>
+                            <li><a href="#">Boletín</a></li>
+                            <li><a href="#">Reembolsos</a></li>
+                        </ul>
+                    </div>
+                    <div class="newsletter">
+                        <p class="title-footer">Boletín informativo</p>
+                        <div class="content">
+                            <p>Suscríbete a nuestros boletines ahora y mantente al día con nuevas colecciones.</p>
+                            <input type="email" placeholder="Ingresa el correo aquí...">
+                            <button>Suscríbete</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <p>Desarrollado por Programación para el mundo &copy; 2025</p>
+                    <img src="img/payment.png" alt="Pagos">
+                </div>
+            </div>
+        </footer>
+		<script src="script.js"></script>
+	</body>
+</html>

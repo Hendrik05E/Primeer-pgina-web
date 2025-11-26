@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Blog - Baristas</title>
+		<link rel="stylesheet" href="styles.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		
+        <style>
+            .blog-page-list {
+                height: auto !important; /* Permite que la lista crezca infinitamente */
+                overflow: visible !important;
+                padding-bottom: 5rem;
+            }
+        </style>
+	</head>
+	<body>
+		<header>
+			<div class="container-hero">
+				<div class="container hero">
+					<div class="customer-support">
+						<i class="fa-solid fa-headset"></i>
+						<div class="content-customer-support">
+							<span class="text">Soporte al cliente</span>
+							<span class="number">123-456-7890</span>
+						</div>
+					</div>
+
+					<div class="container-logo">
+						<i class="fa-solid fa-mug-hot"></i>
+						<h1 class="logo"><a href="index.html">Baristas</a></h1>
+					</div>
+
+					<div class="container-user">
+						<i class="fa-solid fa-user"></i>
+						<i class="fa-solid fa-basket-shopping"></i>
+						<div class="content-shopping-cart">
+							<span class="text">Carrito</span>
+							<span class="number">(0)</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container-navbar">
+				<nav class="navbar container">
+					<i class="fa-solid fa-bars"></i>
+					<ul class="menu">
+						<li><a href="/index.html">Inicio</a></li>
+						<li><a href="/Moca Elado.html">Moca Helado</a></li>
+						<li><a href="/Expreso.html">Reservas</a></li>
+						<li><a href="/Comentarios.html">Comentarios</a></li>
+						<li><a href="/ubicacion.html">ubicacion</a></li>
+						<li><a href="/blog.html">Blog</a></li>
+					</ul>
+
+					<form class="search-form">
+						<input type="search" placeholder="Buscar..." />
+						<button class="btn-search">
+							<i class="fa-solid fa-magnifying-glass"></i>
+						</button>
+					</form>
+				</nav>
+			</div>
+		</header>
+
+		<section class="banner" style="background-image: linear-gradient(100deg, #000000, #00000020), url('img/blog-1.jpg'); height: 40rem;">
+			<div class="content-banner" style="padding: 15rem 0;">
+				<p>Noticias y Consejos</p>
+				<h2>El Mundo del <br />Barismo</h2>
+			</div>
+		</section>
+
+		<main class="main-content">
+			<section class="container blogs">
+				<h1 class="heading-1" style="margin-top: 4rem;">Todos los Artículos</h1>
+
+				<div class="container-blogs blog-page-list">
+					
+                    <div class="card-blog">
+						<div class="container-img">
+							<img src="img/blog-1.jpg" alt="Imagen Blog 1" />
+							<div class="button-group-blog">
+								<span><i class="fa-solid fa-magnifying-glass"></i></span>
+								<span><i class="fa-solid fa-link"></i></span>
+							</div>
+						</div>
+						<div class="content-blog">
+							<h3>Cómo preparar el café perfecto</h3>
+							<span>12 Octubre 2023</span>
+							<p>Descubre los secretos de la temperatura del agua y el molido ideal para obtener una taza inolvidable.</p>
+							<div class="btn-read-more">Leer más</div>
+						</div>
+					</div>
+
+                    <div class="card-blog">
+						<div class="container-img">
+							<img src="img/blog-2.jpg" alt="Imagen Blog 2" />
+							<div class="button-group-blog">
+								<span><i class="fa-solid fa-magnifying-glass"></i></span>
+								<span><i class="fa-solid fa-link"></i></span>
+							</div>
+						</div>
+						<div class="content-blog">
+							<h3>Beneficios del café en la salud</h3>
+							<span>29 Noviembre 2023</span>
+							<p>Estudios recientes demuestran que una taza al día puede mejorar tu concentración y estado de ánimo.</p>
+							<div class="btn-read-more">Leer más</div>
+						</div>
+					</div>
+
+                    <div class="card-blog">
+						<div class="container-img">
+							<img src="img/blog-3.jpg" alt="Imagen Blog 3" />
+							<div class="button-group-blog">
+								<span><i class="fa-solid fa-magnifying-glass"></i></span>
+								<span><i class="fa-solid fa-link"></i></span>
+							</div>
+						</div>
+						<div class="content-blog">
+							<h3>Historia del grano Arábica</h3>
+							<span>05 Diciembre 2023</span>
+							<p>Viajamos a las raíces de Etiopía para conocer el origen del grano más popular del mundo.</p>
+							<div class="btn-read-more">Leer más</div>
+						</div>
+					</div>
+
+                    <div class="card-blog">
+						<div class="container-img">
+							<img src="img/cafe-irish.jpg" alt="Imagen Blog 4" />
+							<div class="button-group-blog">
+								<span><i class="fa-solid fa-magnifying-glass"></i></span>
+								<span><i class="fa-solid fa-link"></i></span>
+							</div>
+						</div>
+						<div class="content-blog">
+							<h3>Diferencia: Latte vs Capuchino</h3>
+							<span>15 Enero 2024</span>
+							<p>¿Mucha leche o mucha espuma? Te enseñamos a distinguir estas dos bebidas clásicas.</p>
+							<div class="btn-read-more">Leer más</div>
+						</div>
+					</div>
+
+                    <div class="card-blog">
+						<div class="container-img">
+							<img src="img/cafe-helado.jpg" alt="Imagen Blog 5" />
+							<div class="button-group-blog">
+								<span><i class="fa-solid fa-magnifying-glass"></i></span>
+								<span><i class="fa-solid fa-link"></i></span>
+							</div>
+						</div>
+						<div class="content-blog">
+							<h3>Recetas de Café Helado</h3>
+							<span>20 Febrero 2024</span>
+							<p>Refresca tu verano con estas tres recetas fáciles de preparar en casa sin máquina profesional.</p>
+							<div class="btn-read-more">Leer más</div>
+						</div>
+					</div>
+
+                     <div class="card-blog">
+						<div class="container-img">
+							<img src="img/moca-category.jpg" alt="Imagen Blog 6" />
+							<div class="button-group-blog">
+								<span><i class="fa-solid fa-magnifying-glass"></i></span>
+								<span><i class="fa-solid fa-link"></i></span>
+							</div>
+						</div>
+						<div class="content-blog">
+							<h3>El arte del Tueste</h3>
+							<span>10 Marzo 2024</span>
+							<p>Conoce cómo el nivel de tueste afecta la acidez, el cuerpo y el sabor final de tu café.</p>
+							<div class="btn-read-more">Leer más</div>
+						</div>
+					</div>
+
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="container container-footer">
+				<div class="menu-footer">
+					<div class="contact-info">
+						<p class="title-footer">Información de Contacto</p>
+						<ul>
+							<li>Dirección: 71 Pennington Lane Vernon Rockville, CT 06066</li>
+							<li>Teléfono: 123-456-7890</li>
+							<li>Fax: 55555300</li>
+							<li>EmaiL: baristas@support.com</li>
+						</ul>
+						<div class="social-icons">
+							<span class="facebook"><i class="fa-brands fa-facebook-f"></i></span>
+							<span class="twitter"><i class="fa-brands fa-twitter"></i></span>
+							<span class="youtube"><i class="fa-brands fa-youtube"></i></span>
+							<span class="pinterest"><i class="fa-brands fa-pinterest-p"></i></span>
+							<span class="instagram"><i class="fa-brands fa-instagram"></i></span>
+						</div>
+					</div>
+					<div class="information">
+						<p class="title-footer">Información</p>
+						<ul>
+							<li><a href="#">Acerca de Nosotros</a></li>
+							<li><a href="#">Información Delivery</a></li>
+							<li><a href="#">Politicas de Privacidad</a></li>
+							<li><a href="#">Términos y condiciones</a></li>
+							<li><a href="#">Contactános</a></li>
+						</ul>
+					</div>
+					<div class="my-account">
+						<p class="title-footer">Mi cuenta</p>
+						<ul>
+							<li><a href="#">Mi cuenta</a></li>
+							<li><a href="#">Historial de ordenes</a></li>
+							<li><a href="#">Lista de deseos</a></li>
+							<li><a href="#">Boletín</a></li>
+							<li><a href="#">Reembolsos</a></li>
+						</ul>
+					</div>
+					<div class="newsletter">
+						<p class="title-footer">Boletín informativo</p>
+						<div class="content">
+							<p>Suscríbete a nuestros boletines ahora y mantente al día con nuevas colecciones.</p>
+							<input type="email" placeholder="Ingresa el correo aquí...">
+							<button>Suscríbete</button>
+						</div>
+					</div>
+				</div>
+				<div class="copyright">
+					<p>Desarrollado por Programación para el mundo &copy; 2025</p>
+					<img src="img/payment.png" alt="Pagos">
+				</div>
+			</div>
+		</footer>
+		<script src="script.js"></script>
+	</body>
+</html>

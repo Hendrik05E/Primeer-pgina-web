@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Ubicación - Baristas</title>
+		<link rel="stylesheet" href="styles.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		
+        <style>
+            
+			.banner {
+				background-color: var(--dark-color);
+				color: #fff;
+				padding: 10rem 0;
+				text-align: center;
+			}
+			.banner p { font-size: 2rem; margin-bottom: 1rem; }
+			.banner h2 { font-size: 4rem; font-weight: 700; }
+			
+            
+			.location-section {
+				padding: 6rem 0;
+				text-align: center;
+			}
+			.map-container {
+				width: 100%;
+				max-width: 100rem;
+				height: 45rem;
+				margin: 4rem auto 3rem;
+				border: 4px solid var(--primary-color);
+				box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+				border-radius: 1rem;
+				overflow: hidden;
+			}
+			.map-container iframe {
+				width: 100%;
+				height: 100%;
+				border: 0;
+			}
+			.address-info {
+				max-width: 60rem;
+				margin: 0 auto;
+				padding: 3rem;
+				background-color: var(--background-color);
+				border-radius: 1rem;
+				text-align: left;
+				border: 1px solid #ddd;
+                margin-bottom: 4rem;
+			}
+			.address-info h3 {
+				font-size: 2.8rem;
+				color: var(--primary-color);
+				margin-bottom: 2rem;
+                text-align: center;
+			}
+			.address-info p {
+				font-size: 1.8rem;
+				margin-bottom: 1.5rem;
+				color: #333;
+				display: flex;
+				align-items: center;
+				gap: 1rem;
+			}
+			.address-info p i {
+				color: var(--dark-color);
+				font-size: 2rem;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+            <div class="container-hero">
+                <div class="container hero">
+                    <div class="customer-support">
+                        <i class="fa-solid fa-headset"></i>
+                        <div class="content-customer-support">
+                            <span class="text">Soporte al cliente</span>
+                            <span class="number">123-456-7890</span>
+                        </div>
+                    </div>
+                    <div class="container-logo">
+                        <i class="fa-solid fa-mug-hot"></i>
+                        <h1 class="logo"><a href="index.html">Baristas</a></h1>
+                    </div>
+                    <div class="container-user">
+                        <i class="fa-solid fa-user"></i>
+                        <i class="fa-solid fa-basket-shopping"></i>
+                        <div class="content-shopping-cart">
+                            <span class="text">Carrito</span>
+                            <span class="number">(0)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-navbar">
+				<nav class="navbar container">
+					<i class="fa-solid fa-bars"></i>
+					<ul class="menu">
+						<li><a href="/index.html">Inicio</a></li>
+						<li><a href="/Moca Elado.html">Moca Helado</a></li>
+						<li><a href="/Expreso.html">Reservas</a></li>
+						<li><a href="/Comentarios.html">Comentarios</a></li>
+						<li><a href="/ubicacion.html">ubicacion</a></li>
+						<li><a href="/blog.html">Blog</a></li>
+					</ul>
+
+					<form class="search-form">
+						<input type="search" placeholder="Buscar..." />
+						<button class="btn-search">
+							<i class="fa-solid fa-magnifying-glass"></i>
+						</button>
+					</form>
+				</nav>
+			</div>
+        </header>
+
+        <section class="banner">
+			<p>Visítanos y disfruta de un café fresco</p>
+			<h2>Nuestra Ubicación</h2>
+		</section>
+
+		<main class="main-content">
+			<section class="container location-section">
+                <h2 class="heading-1">¿Dónde Estamos?</h2>
+
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1531649.5290940733!2d-77.037497!3d-12.046373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c5f87be81f69%3A0x629c178332152a5c!2sLima%2C%20Per%C3%BA!5e0!3m2!1ses!2sus!4v1677278400000!5m2!1ses!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                
+                <div class="address-info">
+                    <h3>Datos de Contacto y Horarios</h3>
+                    <p>
+                        <i class="fa-solid fa-map-pin"></i>
+                        **Dirección:** 71 Pennington Lane Vernon Rockville, CT 06066
+                    </p>
+                    <p>
+                        <i class="fa-solid fa-clock"></i>
+                        **Horario:** Lunes a Viernes: 7:00 AM - 8:00 PM
+                    </p>
+                    <p>
+                        <i class="fa-solid fa-coffee"></i>
+                        **Fines de Semana:** 8:00 AM - 6:00 PM
+                    </p>
+                    <p>
+                        <i class="fa-solid fa-phone"></i>
+                        **Teléfono:** 123-456-7890
+                    </p>
+                </div>
+			</section>
+		</main>
+
+		<footer class="footer">
+            <div class="container container-footer">
+                <div class="menu-footer">
+                    <div class="contact-info">
+                        <p class="title-footer">Información de Contacto</p>
+                        <ul>
+                            <li>Dirección: 71 Pennington Lane Vernon Rockville, CT 06066</li>
+                            <li>Teléfono: 123-456-7890</li>
+                            <li>Fax: 55555300</li>
+                            <li>EmaiL: baristas@support.com</li>
+                        </ul>
+                        <div class="social-icons">
+                            <span class="facebook"><i class="fa-brands fa-facebook-f"></i></span>
+                            <span class="twitter"><i class="fa-brands fa-twitter"></i></span>
+                            <span class="youtube"><i class="fa-brands fa-youtube"></i></span>
+                            <span class="pinterest"><i class="fa-brands fa-pinterest-p"></i></span>
+                            <span class="instagram"><i class="fa-brands fa-instagram"></i></span>
+                        </div>
+                    </div>
+                    <div class="information">
+                        <p class="title-footer">Información</p>
+                        <ul>
+                            <li><a href="#">Acerca de Nosotros</a></li>
+                            <li><a href="#">Información Delivery</a></li>
+                            <li><a href="#">Politicas de Privacidad</a></li>
+                            <li><a href="#">Términos y condiciones</a></li>
+                            <li><a href="#">Contactános</a></li>
+                        </ul>
+                    </div>
+                    <div class="my-account">
+                        <p class="title-footer">Mi cuenta</p>
+                        <ul>
+                            <li><a href="#">Mi cuenta</a></li>
+                            <li><a href="#">Historial de ordenes</a></li>
+                            <li><a href="#">Lista de deseos</a></li>
+                            <li><a href="#">Boletín</a></li>
+                            <li><a href="#">Reembolsos</a></li>
+                        </ul>
+                    </div>
+                    <div class="newsletter">
+                        <p class="title-footer">Boletín informativo</p>
+                        <div class="content">
+                            <p>Suscríbete a nuestros boletines ahora y mantente al día con nuevas colecciones.</p>
+                            <input type="email" placeholder="Ingresa el correo aquí...">
+                            <button>Suscríbete</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <p>Desarrollado por Programación para el mundo &copy; 2025</p>
+                    <img src="img/payment.png" alt="Pagos">
+                </div>
+            </div>
+        </footer>
+		<script src="script.js"></script>
+	</body>
+</html>

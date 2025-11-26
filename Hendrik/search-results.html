@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Resultados de Búsqueda - Baristas</title>
+		<link rel="stylesheet" href="styles.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		
+        <style>
+           
+			.banner {
+				background-color: var(--dark-color);
+				color: #fff;
+				padding: 10rem 0;
+				text-align: center;
+			}
+			.banner p { font-size: 2rem; margin-bottom: 1rem; }
+			.banner h2 { font-size: 4rem; font-weight: 700; }
+			
+            
+            .results-section {
+                padding: 5rem 0;
+                min-height: 50vh; 
+            }
+            .results-list {
+                list-style: none;
+                padding: 0;
+                margin-top: 3rem;
+            }
+            .result-item {
+                border-bottom: 1px solid #eee;
+                padding: 1.5rem 0;
+            }
+            .result-item h3 {
+                font-size: 2.2rem;
+                margin-bottom: 0.5rem;
+            }
+            .result-item a {
+                color: var(--primary-color);
+                text-decoration: none;
+            }
+            .result-item a:hover {
+                text-decoration: underline;
+            }
+            .no-results {
+                text-align: center;
+                font-size: 1.8rem;
+                color: #555;
+                margin-top: 5rem;
+            }
+        </style>
+	</head>
+	<body>
+		<header>
+            <div class="container-hero">
+				<div class="container hero">
+					<div class="customer-support">
+						<i class="fa-solid fa-headset"></i>
+						<div class="content-customer-support">
+							<span class="text">Soporte al cliente</span>
+							<span class="number">123-456-7890</span>
+						</div>
+					</div>
+
+					<div class="container-logo">
+						<i class="fa-solid fa-mug-hot"></i>
+						<h1 class="logo"><a href="index.html">Baristas</a></h1>
+					</div>
+
+					<div class="container-user">
+						<i class="fa-solid fa-user"></i>
+						<i class="fa-solid fa-basket-shopping content-shopping-cart">
+							<span class="number">(0)</span>
+						</i>
+						<i class="fa-solid fa-bars"></i>
+					</div>
+				</div>
+			</div>
+
+			<div class="container-navbar">
+				<nav class="navbar container">
+					<ul class="menu">
+						<li><a href="index.html">Inicio</a></li>
+						<li><a href="#">Catálogo</a></li>
+						<li><a href="Recetas.html">Recetas</a></li>
+						<li><a href="blog.html">Blog</a></li>
+						<li><a href="Comentarios.html">Opiniones</a></li>
+						<li><a href="ubicacion.html">Ubicación</a></li>
+					</ul>
+					<form class="search-form">
+						<input type="search" placeholder="Buscar..." />
+						<button class="btn-search">
+							<i class="fa-solid fa-magnifying-glass"></i>
+						</button>
+					</form>
+				</nav>
+			</div>
+		</header>
+
+        <main>
+            <section class="banner">
+                <div class="container">
+                    <p>Resultados de la búsqueda</p>
+                    <h2 id="search-query-display"></h2>
+                </div>
+            </section>
+
+            <section class="results-section">
+                <div class="container">
+                    <div id="results-container">
+                        <p class="no-results">Cargando resultados...</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="container-footer">
+				<div class="container top-footer">
+					<div class="info-footer">
+						<div class="logo-footer">
+							<i class="fa-solid fa-mug-hot"></i>
+							<h3 class="title-footer">Baristas</h3>
+						</div>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, dolor voluptatum rem, libero ipsam harum vero ex soluta sit doloremque tenetur. Repellat quis, sint velit cumque aut dolorem natus eius!</p>
+						<div class="social-links">
+							<span class="facebook">
+								<i class="fa-brands fa-facebook-f"></i>
+							</span>
+							<span class="twitter">
+								<i class="fa-brands fa-twitter"></i>
+							</span>
+							<span class="youtube">
+								<i class="fa-brands fa-youtube"></i>
+							</span>
+							<span class="pinterest">
+								<i class="fa-brands fa-pinterest-p"></i>
+							</span>
+							<span class="instagram">
+								<i class="fa-brands fa-instagram"></i>
+							</span>
+						</div>
+					</div>
+
+					<div class="information">
+						<p class="title-footer">Información</p>
+						<ul>
+							<li><a href="#">Acerca de Nosotros</a></li>
+							<li><a href="#">Información Delivery</a></li>
+							<li><a href="#">Politicas de Privacidad</a></li>
+							<li><a href="#">Términos y condiciones</a></li>
+							<li><a href="#">Contactános</a></li>
+						</ul>
+					</div>
+
+					<div class="my-account">
+						<p class="title-footer">Mi cuenta</p>
+
+						<ul>
+							<li><a href="#">Mi cuenta</a></li>
+							<li><a href="#">Historial de ordenes</a></li>
+							<li><a href="#">Lista de deseos</a></li>
+							<li><a href="#">Boletín</a></li>
+							<li><a href="#">Reembolsos</a></li>
+						</ul>
+					</div>
+
+					<div class="newsletter">
+						<p class="title-footer">Boletín informativo</p>
+
+						<div class="content">
+							<p>
+								Suscríbete a nuestros boletines ahora y mantente al
+								día con nuevas colecciones y ofertas exclusivas.
+							</p>
+							<input type="email" placeholder="Ingresa el correo aquí...">
+							<button>Suscríbete</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="copyright">
+					<p>
+						Desarrollado por Programación para el mundo &copy; 2025
+					</p>
+
+					<img src="img/payment.png" alt="Pagos">
+				</div>
+			</div>
+        </footer>
+
+        <script>
+            
+            function getSearchQuery() {
+                const params = new URLSearchParams(window.location.search);
+                return params.get('q');
+            }
+
+            
+            function renderSearchResults() {
+                const query = getSearchQuery();
+                const displayElement = document.getElementById('search-query-display');
+                const resultsContainer = document.getElementById('results-container');
+                
+                
+                if (query) {
+                    displayElement.textContent = `Búsqueda para: "${decodeURIComponent(query)}"`;
+                } else {
+                    displayElement.textContent = `Realiza una nueva búsqueda`;
+                    resultsContainer.innerHTML = '<p class="no-results">No se especificó un término de búsqueda.</p>';
+                    return;
+                }
+                
+                const lowerCaseQuery = query.toLowerCase();
+                
+                
+                
+                const data = [
+                   
+                    { title: "Expreso Clásico", url: "Expreso.html", description: "La receta fundamental, potente y rápida." },
+                    { title: "Moca Helado", url: "Moca Elado.html", description: "Un café dulce y frío con chocolate, perfecto para el verano." },
+                    { title: "Recetas de Café", url: "Recetas.html", description: "Lista de todas las recetas de café que ofrecemos, desde el latte hasta el capuchino." },
+                    
+                   
+                    { title: "Blog: Café de Especialidad", url: "blog.html", description: "Artículo sobre la calidad y el proceso del café de especialidad." },
+                    { title: "Blog: Métodos de Extracción", url: "blog.html", description: "Guía para preparar café con Chemex, V60 y prensa francesa." },
+                    
+                  
+                    { title: "Opiniones y Comentarios", url: "Comentarios.html", description: "Mira lo que dicen nuestros clientes sobre nuestros productos y servicios." },
+                    { title: "Ubicación de Baristas", url: "ubicacion.html", description: "Encuentra dónde estamos y cómo llegar a nuestra cafetería." },
+                ];
+
+                
+                const filteredResults = data.filter(item => 
+                    item.title.toLowerCase().includes(lowerCaseQuery) ||
+                    item.description.toLowerCase().includes(lowerCaseQuery)
+                );
+
+                
+                if (filteredResults.length > 0) {
+                    let resultsHTML = '<ul class="results-list">';
+                    
+                    filteredResults.forEach(item => {
+                        resultsHTML += `
+                            <li class="result-item">
+                                <h3><a href="${item.url}">${item.title}</a></h3>
+                                <p>${item.description}</p>
+                                <small>Página: ${item.url}</small>
+                            </li>
+                        `;
+                    });
+                    
+                    resultsHTML += '</ul>';
+                    resultsContainer.innerHTML = resultsHTML;
+                } else {
+                    resultsContainer.innerHTML = '<p class="no-results">Lo sentimos, no encontramos resultados para tu búsqueda.</p>';
+                }
+            }
+
+           
+            window.onload = renderSearchResults;
+        </script>
+		<script src="script.js"></script>
+	</body>
+</html>
